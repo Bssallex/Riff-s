@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS TB_USER (
+  id serial PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255)
+);
