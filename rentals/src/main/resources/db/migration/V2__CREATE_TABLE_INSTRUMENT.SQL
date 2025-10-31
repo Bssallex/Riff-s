@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS TB_INSTRUMENT (
+  id serial PRIMARY KEY,
+  brand VARCHAR(255) NOT NULL,
+  model VARCHAR(255) NOT NULL,
+  price NUMERIC(10, 2) NOT NULL,
+  type_instrument VARCHAR(50) NOT NULL,
+  available VARCHAR(50) NOT NULL
+);
