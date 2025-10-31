@@ -12,6 +12,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class ExceptionController {
 
+    //USER EXCEPTIONS
     @ExceptionHandler(UserNotFound.class)
     public ResponseEntity<Map<String, String>> handleUserNotFound(UserNotFound exception){
         Map<String, String> ex = new HashMap<>();
@@ -28,5 +29,22 @@ public class ExceptionController {
 
         ex.put("Mensagem: ", "Preencha os campos corretamente. 'name' não pode ser nulo e 'email' precisa ser neste formato: UsuarioExemplo@email.com");
         return new ResponseEntity<>(ex, HttpStatus.BAD_REQUEST);
+    }
+
+    //INSTRUMENT EXCEPTIONS
+    @ExceptionHandler(ValueEnumInvalid.class)
+    public ResponseEntity<Map<String, String>> handleValueEnumInvalid(ValueEnumInvalid exception){
+        Map<String, String> ex = new HashMap<>();
+        ex.put("Erro: ", exception.getMessage());
+        ex.put("Mensagem: ", "Verifique se os valores informados são validos.");
+        return new ResponseEntity<>(ex, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(InstrumentNotFound.class)
+    public ResponseEntity<Map<String, String>> handleInstrumentNotFound(InstrumentNotFound exception){
+        Map<String, String> ex = new HashMap<>();
+        ex.put("Erro: ", exception.getMessage());
+        ex.put("Mensagem: ", "Verifique se o instrumento existe no sistema.");
+        return new ResponseEntity<>(ex, HttpStatus.NOT_FOUND);
     }
 }
