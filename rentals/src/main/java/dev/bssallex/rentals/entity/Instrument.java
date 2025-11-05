@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_INSTRUMENT")
@@ -32,4 +33,7 @@ public class Instrument {
 
     @Enumerated(EnumType.STRING)
     private Available available;
+
+    @ManyToMany(mappedBy = "instruments") // Muitos instrumentos podem estar em muitos aluguéis
+    private List<Rentals> rentals;
 }
