@@ -47,4 +47,22 @@ public class ExceptionController {
         ex.put("Mensagem: ", "Verifique se o instrumento existe no sistema.");
         return new ResponseEntity<>(ex, HttpStatus.NOT_FOUND);
     }
+
+    // RENTALS EXCEPTIONS
+
+    @ExceptionHandler(RentalsNotFound.class)
+    public ResponseEntity<Map<String, String>> handleHentalsNotFound(RentalsNotFound exception){
+        Map<String, String> ex = new HashMap<>();
+        ex.put("Erro: ", exception.getMessage());
+        ex.put("Mensagem: ", "Verifique se este aluguel existe no sistema.");
+        return new ResponseEntity<>(ex, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(NotFoundUserRentals.class)
+    public ResponseEntity<Map<String, String>> handleHentalsNotFound(NotFoundUserRentals exception){
+        Map<String, String> ex = new HashMap<>();
+        ex.put("Erro: ", exception.getMessage());
+        ex.put("Mensagem: ", "Verifique se este usuário tem algum registro de aluguel no sistema.");
+        return new ResponseEntity<>(ex, HttpStatus.NOT_FOUND);
+    }
 }
