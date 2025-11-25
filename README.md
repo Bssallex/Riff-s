@@ -14,8 +14,10 @@ Ao confirmar o aluguel, o sistema envia ao usuário todas as informações essen
 - **Lombok**
 - **DTOs**
 - **Maven**
-- **Docker + PostgreSQL**
+- **Docker-PostgreSQL**
 - **Flyway**
 - **RabbitMQ** (mensageria entre serviços)
 - **Exceções personalizadas**
 - **SMTP** (envio de emails)
+- **Validation**
+- **Jackson-Datatype**
