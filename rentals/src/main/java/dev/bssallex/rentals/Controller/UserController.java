@@ -1,6 +1,7 @@
 package dev.bssallex.rentals.Controller;
 
 import dev.bssallex.rentals.Service.UserService;
+import dev.bssallex.rentals.docs.UserControllerDoc;
 import dev.bssallex.rentals.dtos.request.UserRequest;
 import dev.bssallex.rentals.dtos.response.UserResponse;
 import jakarta.validation.Valid;
@@ -15,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
-public class UserController {
+public class UserController implements UserControllerDoc {
 
     private final UserService service;
 

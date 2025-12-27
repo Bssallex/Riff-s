@@ -1,6 +1,7 @@
 package dev.bssallex.rentals.Controller;
 
 import dev.bssallex.rentals.Service.RentalsService;
+import dev.bssallex.rentals.docs.RentalsControllerDoc;
 import dev.bssallex.rentals.dtos.request.RentalsRequest;
 import dev.bssallex.rentals.dtos.response.RentalsResponse;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/rentals")
 @RequiredArgsConstructor
-public class RentalsController {
+public class RentalsController implements RentalsControllerDoc {
 
     private final RentalsService service;
 
@@ -23,8 +24,8 @@ public class RentalsController {
     }
 
     @GetMapping("/user/{name}")
-    public ResponseEntity<RentalsResponse> findRentalsByNameUser(@PathVariable String name){
-        RentalsResponse rentals = service.getRentalsByNameUser(name);
+    public ResponseEntity<List<RentalsResponse>> findRentalsByNameUser(@PathVariable String name){
+        List<RentalsResponse> rentals = service.getRentalsByNameUser(name);
         return ResponseEntity.ok(rentals);
     }
 
@@ -32,5 +33,11 @@ public class RentalsController {
     public ResponseEntity<RentalsResponse> createRentals(@RequestBody RentalsRequest request){
         RentalsResponse rentals = service.createRentals(request);
         return ResponseEntity.ok(rentals);
+    }
+
+    @DeleteMapping("/delete/{tag}")
+    public ResponseEntity<Void> deleteRentals(@PathVariable String tag) {
+        service.deleteRentals(tag);
+        return ResponseEntity.noContent().build();
     }
 }

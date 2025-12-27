@@ -1,6 +1,7 @@
 package dev.bssallex.rentals.Controller;
 
 import dev.bssallex.rentals.Service.InstrumentService;
+import dev.bssallex.rentals.docs.InstrumentControllerDoc;
 import dev.bssallex.rentals.dtos.request.InstrumentRequest;
 import dev.bssallex.rentals.dtos.response.InstrumentResponse;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/instruments")
 @RequiredArgsConstructor
-public class InstrumentController {
+public class InstrumentController implements InstrumentControllerDoc {
 
     private final InstrumentService service;
 
