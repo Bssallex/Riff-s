@@ -25,5 +25,11 @@ spring:
     validate-on-migrate: true
     schemas: public
 
+  springdoc:
+    api-docs:
+      path: /api/api-docs
+    swagger-ui:
+      path: /swagger/index.html
+
   server:
     port: 8080
