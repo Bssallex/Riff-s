@@ -42,10 +42,16 @@ public class RentalsService {
                 .toList();
     }
 
-    public RentalsResponse getRentalsByNameUser(String name){
-        Rentals rentals = repository.findByUsers_name(name)
-                .orElseThrow(() -> new NotFoundUserRentals("Usuário não encontrado."));
-        return RentalsMapper.toResponse(rentals);
+    public List<RentalsResponse> getRentalsByNameUser(String name){
+        List<Rentals> rentals = repository.findByUsers_name(name);
+        if(rentals.isEmpty()){
+            throw new NotFoundUserRentals("Usuário não encontrado.");
+        }
+
+        return rentals
+                .stream()
+                .map(RentalsMapper::toResponse)
+                .toList();
     }
 
     public String gerarPrefixo(String type) {
@@ -93,6 +99,11 @@ public class RentalsService {
         Rentals savedRentals = repository.save(rentals);
         producer.publishEvent(emailDto); // 4
         return RentalsMapper.toResponse(savedRentals);
+    }
+
+    public void deleteRentals(String tag) {
+       Rentals deleteTag = repository.findByTag(tag).orElseThrow(() -> new UserNotFound("Usuário não encontrado."));
+        repository.delete(deleteTag);
     }
 
 
