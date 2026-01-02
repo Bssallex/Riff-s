@@ -120,9 +120,13 @@ Essa organização facilita a manutenção, escalabilidade e padronização entr
 
 ---
 
-## 🔄 Exemplo Visual
+## 📸 Exemplo Visual
 
-1. Cadastro de usuário
+### Cadastro de Usuário
+
+<p align="center">
+  <img src="docs/images/IMG_9958.jpg" width="900"/>
+</p>
    
 
 
