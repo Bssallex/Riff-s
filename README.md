@@ -122,10 +122,28 @@ Essa organização facilita a manutenção, escalabilidade e padronização entr
 
 ## 📸 Exemplo Visual
 
-### Cadastro de Usuário
+### Cadastro de usuário
 
 <p align="left">
   <img src="docs/images/IMG_9958.jpeg" width="500"/>
+</p>
+
+### Catálogo de instrumento
+
+<p align="left">
+  <img src="docs/images/02.jpeg" width="500"/>
+</p>
+
+### Criando aluguel
+
+<p align="left">
+  <img src="docs/images/03.jpeg" width="500"/>
+</p>
+
+### Email
+
+<p align="left">
+  <img src="docs/images/04.jpeg" width="500"/>
 </p>
    
 
