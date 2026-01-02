@@ -2,7 +2,7 @@
 
 API REST desenvolvida para gerenciar o aluguel de instrumentos musicais.  
 Permite que usuários realizem cadastro, consultem o catálogo de instrumentos disponíveis e efetuem aluguéis.  
-Ao confirmar o aluguel, o sistema envia ao usuário todas as informações essenciais — como data de devolução, instrumento escolhido e demais detalhes da locação.
+Ao confirmar o aluguel, o sistema envia um email ao usuário contendo todas as informações, como: data de devolução, instrumento escolhido e demais detalhes da locação.
 
 ---
 
