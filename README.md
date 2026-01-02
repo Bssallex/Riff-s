@@ -32,9 +32,9 @@ Aplicação baseada em **microserviços**, com comunicação síncrona via HTTP 
 Client
   │
   ▼
-[ User Service ] ──┐
-                   ├──► [ Rentals Service ] ──► RabbitMQ ──► [ Email Service ]
-[ Instrument Service ] ┘
+  [     User     ] ──┐
+                     ├──► [ Rentals Service ] ──► RabbitMQ ──► [ Email Service ]
+  [  Instrument  ] ──┘
 ```
 
 **Responsabilidades dos serviços:**
