@@ -42,14 +42,12 @@ Aplicação baseada em **microserviços**, com comunicação síncrona via HTTP 
 * **User Service**: gerenciamento de usuários
 * **Instrument Service**: catálogo de instrumentos disponíveis
 * **Rentals Service**: orquestração e persistência dos aluguéis
-* **Email Service**: envio de notificações via SMTP
 * **RabbitMQ**: mensageria assíncrona entre serviços
+* **Email Service**: envio de notificações via SMTP
 
 ---
 
 ## 📂 Estrutura Interna dos Microserviços
-
-Usuário, Catálogo e Aluguel
 
 ```
 Rentals
@@ -156,6 +154,23 @@ Essa organização facilita a manutenção, escalabilidade e padronização entr
 <p align="left">
   <img src="docs/images/04.jpeg" width="500"/>
 </p>
+
+---
+
+## 🔐 Configurações Sensíveis
+
+As configurações de banco de dados, mensageria e envio de email
+são definidas via variáveis de ambiente.
+
+---
+
+## 📘 Documentação da API (Swagger)
+
+A aplicação utiliza **Springdoc OpenAPI** para documentação automática.
+
+Após iniciar o projeto, a documentação pode ser acessada em: http://localhost:8080/swagger-ui/index.html#/
+
+---
    
 
 
