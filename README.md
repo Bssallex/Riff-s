@@ -124,8 +124,8 @@ Essa organização facilita a manutenção, escalabilidade e padronização entr
 
 ### Cadastro de Usuário
 
-<p align="center">
-  <img src="docs/images/IMG_9958.jpg" width="900"/>
+<p align="left">
+  <img src="docs/images/IMG_9958.jpeg" width="500"/>
 </p>
    
 
