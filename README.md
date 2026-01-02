@@ -49,17 +49,28 @@ Client
 
 ## 📂 Estrutura Interna dos Microserviços
 
-Todos os serviços seguem uma estrutura padronizada:
+Usuário, Catálogo e Aluguel
 
 ```
-service-name
+Rentals
+├── configuration
 ├── controller
-├── service
-├── repository
+├── docs
 ├── dto
 ├── entity
-├── exception
-└── config
+├── enums
+├── exceptions
+├── repository
+└── service
+
+Email
+├── configuration
+├── dto
+├── entity
+├── enums
+├── exceptions
+├── repository
+└── service
 ```
 
 Essa organização facilita a manutenção, escalabilidade e padronização entre os serviços.
