@@ -29,9 +29,9 @@ Ao confirmar o aluguel, o sistema envia um email ao usuário contendo todas as i
 Aplicação baseada em **microserviços**, com comunicação síncrona via HTTP e comunicação assíncrona orientada a eventos utilizando **RabbitMQ**.
 
 ```
-Client
-  │
-  ▼
+       Client
+         │
+         ▼
   [     User     ] ──┐
                      ├──► [ Rentals Service ] ──► RabbitMQ ──► [ Email Service ]
   [  Instrument  ] ──┘
