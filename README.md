@@ -137,7 +137,7 @@ Essa organização facilita a manutenção, escalabilidade e padronização entr
   <img src="docs/images/IMG_9958.jpeg" width="500"/>
 </p>
 
-### Catálogo de instrumento
+### Catálogo de instrumentos
 
 <p align="left">
   <img src="docs/images/02.jpeg" width="500"/>
